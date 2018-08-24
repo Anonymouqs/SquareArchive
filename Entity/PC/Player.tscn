@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Root/Entity/PC/PC.gd" type="Script" id=1]
+[ext_resource path="res://Art/base.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.0494, 28 )
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+scale = Vector2( 1.25, 1.25 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+Up = Vector2( 0, -1 )
+Gravity = 10
+Jump = 10
+Speed = 10
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( -31.985, -32 )
+scale = Vector2( 63.9851, 64.1006 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+scale = Vector2( 1.14084, 1.14286 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+
