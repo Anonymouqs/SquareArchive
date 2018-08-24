@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var Up = Vector2(0,-1)
 export var Gravity = 50
-export var Jump = 1000 setget set_Jump, get_Jump
+export var Jump = 100 setget set_Jump, get_Jump
 export var JumpMax = 2
 export var Speed = 500
 export var Accel = 20
