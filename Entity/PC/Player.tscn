@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 28.0494, 28 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
@@ -17,9 +17,11 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 Up = Vector2( 0, -1 )
-Gravity = 10
-Jump = 10
-Speed = 10
+Gravity = 50
+Jump = 1000
+JumpMax = 2
+Speed = 500
+Accel = 20
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
