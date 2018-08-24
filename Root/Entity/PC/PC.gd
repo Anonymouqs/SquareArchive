@@ -10,7 +10,7 @@ export var Accel = 20
 var motion = Vector2()
 var jumpcount = 1
 
-func set_jump(jump):
+func set_Jump(jump):
 	Jump = jump*10
 func get_Jump():
 	return Jump
