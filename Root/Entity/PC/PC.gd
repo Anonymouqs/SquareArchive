@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var Up = Vector2(0,-1)
 export var Gravity = 50
-export var Jump = 1000
+export var Jump = 1000 setget set_Jump, get_Jump
 export var JumpMax = 2
 export var Speed = 500
 export var Accel = 20
@@ -10,6 +10,11 @@ export var Accel = 20
 var motion = Vector2()
 var jumpcount = 1
 
+func set_jump(jump):
+	Jump = jump*10
+func get_Jump():
+	return Jump
+	
 func _ready():
 	pass
 	
