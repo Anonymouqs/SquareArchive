@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Root/Entity/PC/PC.gd" type="Script" id=1]
-[ext_resource path="res://Art/base.png" type="Texture" id=2]
+[ext_resource path="res://Inverse.tres" type="Material" id=1]
+[ext_resource path="res://Root/Entity/PC/PC.gd" type="Script" id=2]
+[ext_resource path="res://Art/base.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -10,31 +11,62 @@ extents = Vector2( 28.0494, 28 )
 
 [node name="Player" type="KinematicBody2D"]
 
+material = ExtResource( 1 )
 scale = Vector2( 1.25, 1.25 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Material" ]
 Up = Vector2( 0, -1 )
 Gravity = 50
 Jump = 100
 JumpMax = 2
 Speed = 500
 Accel = 20
+Health = 3
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -31.985, -32 )
 scale = Vector2( 63.9851, 64.1006 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 centered = false
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Material", "Offset", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+visible = false
 scale = Vector2( 1.14084, 1.14286 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.15
+drag_margin_top = 0.15
+drag_margin_right = 0.15
+drag_margin_bottom = 0.15
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit", "Material", "Offset", "Smoothing" ]
 
 

@@ -14,12 +14,6 @@ scale = Vector2( 9.6875, 2.5 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -50, -80 )
-Up = Vector2( 0, -1 )
-Gravity = 50
-Jump = 100
-JumpMax = 2
-Speed = 500
-Accel = 20
+position = Vector2( -90, -50 )
 
 

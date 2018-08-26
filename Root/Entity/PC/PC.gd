@@ -6,9 +6,11 @@ export var Jump = 100 setget set_Jump, get_Jump
 export var JumpMax = 2
 export var Speed = 500
 export var Accel = 20
+export var Health = 3
 
 var motion = Vector2()
 var jumpcount = 1
+
 
 func set_Jump(jump):
 	Jump = jump*10
